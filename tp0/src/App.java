@@ -25,7 +25,20 @@ public class App { /*App java es como si fuera nuestro main, que nos permite cre
             System.out.println("Estudiante: " + est.getNombre()+ " " + est.getApellido() + " | Promedio: " + est.getPromedio());
         } //est es el objeto temporal que representa cada estudiante en bucle
       
-      
-        //Materia algebra = new Materia();
+        // 5- Crear materias y asignarlas a estudiantes
+        
+        Materia algebra = new Materia("Algebra", "MAT101", 6, 9.5f);
+        Materia historia = new Materia("Historia", "HIS201", 4, 8.0f);
+        Materia programacion = new Materia("Programacion", "CS301", 8, 9.0f);
+    
+        //crear estudiantes y asignar materias
+        Estudiante estudiante1 = new Estudiante("Ana", "Lopez", 20, "Ingenieria", 0.0f);
+        estudiante1.agregarMateria(algebra);
+        estudiante1.agregarMateria(historia);
+        estudiante1.agregarMateria(programacion);
+        
+        //mostrar promedio calculado
+        System.out.println("Promedio de " + estudiante1.getNombre() + ": " + e1.calcularPromedio());
+
     }
 }

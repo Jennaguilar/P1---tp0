@@ -1,5 +1,7 @@
 // Estudiante.java
 
+import java.util.ArrayList;
+
 public class Estudiante {
     //1) atributos privados encapsulados
     // con encapsulamiento no se puede acceder directamente a los atributos
@@ -9,9 +11,16 @@ public class Estudiante {
     private String carrera;
     private float promedio; 
 
+
+    // relacion con materia (1 estudiante -> varias materias)
+    private ArrayList<Materia> materias = new ArrayList<>();
+
     //2) constructor vacio
     public Estudiante(){
     }
+
+
+
     // constructor con parametros
     public Estudiante (String nombre, String apellido, int edad, String carrera, float promedio){
         // Usamos Setters para asignar valores a los atributos
@@ -22,13 +31,30 @@ public class Estudiante {
         this.setPromedio(promedio);
     }
 
-    //3) Metodos get y set
-    // Setter → sirve para "leer" el valor de un atributo
-    // Getter → sirve para "asignar o cambiar" un valor a un atributo
+
+    
+    //Metodos para gestionar materias
+    public void agregarMateria(Materia materia){
+        this.materias.add(materia);
+    }
+    
     public String getNombre() {
         return nombre;
     }
 
+    public double calcularPromedio(){
+        if(materias.isEmpty()) return 0.0; //si no tiene materias, el promedio es 0
+        double suma = 0.0;
+            for(Materia m : materias){
+                suma += m.getCalificacion();
+            }
+        return suma / materias.size(); //promedio = suma de calificaciones / cantidad de materias 
+    }
+
+    //3) Metodos get y set
+    // Setter → sirve para "leer" el valor de un atributo
+    // Getter → sirve para "asignar o cambiar" un valor a un atributo
+    
     public void setNombre(String nombre) {
         // Validar que el nombre no sea nulo o vacío
         if (nombre == null || nombre.isEmpty()) {
