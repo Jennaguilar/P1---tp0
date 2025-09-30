@@ -19,10 +19,10 @@ public class Universidad {
     }
 
     public void mostrarinfo() {
-        System.out.println("Universidad: " + nombre);
+        System.out.println("→ Universidad: " + nombre);
             // recorrer carreras en el arreglo
             for (Carrera carrera : carreras) {
-                System.out.println("Carrera:"+ carrera.getNombre());
+                System.out.println("→ Carrera:"+ carrera.getNombre());
                     for (Estudiante e : carrera.getEstudiantes()) {
                         System.out.println("  Estudiante: " + e.getNombre() + " " + e.getApellido());
                         System.out.println(" Promedio: " + e.calcularPromedio());
