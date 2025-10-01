@@ -1,0 +1,33 @@
+MI INFORME BREVE:
+
+===> Encapsulamiento:
+en las clases (Estudiante, Materia, Carrera y Universidad) aplique Encapsulamiento declarando a los atributos como privados (private)
+Despues implemente los metodos Setter y Getter para entrar y modificar los atributos.
+
+
+===> Relaciones entre clases:
+Estudiante y Materia:
+Cada estudiante tiene una lista de materias lo aplique con (ArrayList<Materia>).
+Luego implemente el metodo de agregarMateria(Materia materia) para agregar o añadir las materias y despues calcular el promedio de las calificaciones usando (calcularPromedio())
+
+Carrera y Estudiante:
+Aqui Carreraccontiene una lista de Estudiante (ArrayList<Estudiantes>).
+los metodos que implemente son:
+→ agregarEstudiante(Estudiante e) es para añadir estudiantes..
+→ listarEstudiantes() aqui muestra todos los estudiantes..
+→ buscarEstudiantes(String nombre) para encontrar o localizar a un estudiante por su nombre y apellido..
+
+Universidad y Carrera:
+La universidad contiene muchas carreras (ArrayList<Carrera>).
+aqui se agrego el metodo de mostrarinfo() para que imprima los datos de la universidad + las carreras y los estudiantes.
+
+
+
+===> Validaciones en los Setter:
+Las validaciones pueden prevenir que se muestre datos invalidos a los objetos
+utilice algunas validaciones como:
+→ setEdad(int edad) aca podemos ver que se evita asignar valores negativos en la edad.
+→ setPromedio(float promedio) aca se valida que el promedio este entre 0 y 10.
+→ setNombre(String nombre) y setApellido(String apellido) se controla que no sea validaciones
+
+
