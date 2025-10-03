@@ -9,7 +9,7 @@ public class Estudiante {
     private String apellido;
     private int edad;
     private String carrera;
-    private float promedio; 
+    private double promedio; 
 
 
     // relacion con materia (1 estudiante -> varias materias)
@@ -22,7 +22,7 @@ public class Estudiante {
 
 
     // constructor con parametros
-    public Estudiante (String nombre, String apellido, int edad, String carrera, float promedio){
+    public Estudiante (String nombre, String apellido, int edad, String carrera, double promedio){
         // Usamos Setters para asignar valores a los atributos
         this.setNombre(nombre);        
         this.setApellido(apellido);
@@ -97,11 +97,11 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
-    public float getPromedio() {
+    public double getPromedio() {
         return promedio;
     }
 
-    public void setPromedio(float promedio) {
+    public void setPromedio(double promedio) {
         // validar promedio entre 0 y 10
         if(promedio < 0 || promedio > 10){
             System.out.println("El promedio debe estar entre 0 y 10");

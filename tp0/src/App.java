@@ -4,15 +4,15 @@ public class App { /*App java es como si fuera nuestro main, que nos permite cre
     public static void main(String[] args) throws Exception {
     
         // 1) Crear materias
-        Materia algebra = new Materia("Algebra", "MAT101", 6, 9.5f);
-        Materia basesdedatos = new Materia("Bases de datos", "BDD201", 4, 8.0f);
-        Materia programacion = new Materia("Programacion", "CS301", 8, 9.0f);
+        Materia algebra = new Materia("Algebra", "MAT101", 6, 9.5);
+        Materia basesdedatos = new Materia("Bases de datos", "BDD201", 4, 8);
+        Materia programacion = new Materia("Programacion", "CS301", 8, 9.0);
 
         // 2) Crear estudiantes
-        Estudiante e1 = new Estudiante("Olivia", "Rodrigo", 22, "Ingenieria en sistemas", 9.5f);
-        Estudiante e2 = new Estudiante("Selena", "Gomez", 21, "Arquitectura", 9.0f);
-        Estudiante e3 = new Estudiante("Lautaro", "Martinez", 24, "Derecho", 8.5f);
-        Estudiante e4 = new Estudiante("Bruno", "Mars", 20, "Ingenieria", 8.0f);
+        Estudiante e1 = new Estudiante("Olivia", "Rodrigo", 22, "Ingenieria en sistemas", 9.5);
+        Estudiante e2 = new Estudiante("Selena", "Gomez", 21, "Arquitectura", 9.0);
+        Estudiante e3 = new Estudiante("Lautaro", "Martinez", 24, "Derecho", 8.5);
+        Estudiante e4 = new Estudiante("Bruno", "Mars", 20, "Ingenieria", 8.0);
 
         // 3) Asignar materias a estudiantes
         // Olivia
@@ -38,6 +38,7 @@ public class App { /*App java es como si fuera nuestro main, que nos permite cre
         Ingenieria.agregarEstudiante(e2);
         Ingenieria.agregarEstudiante(e3);
         Ingenieria.agregarEstudiante(e4);
+        
       
         //5- Crear materias y asignarlas a estudiantes
        Estudiante buscado = Ingenieria.buscarEstudiante("Selena");
@@ -54,7 +55,7 @@ public class App { /*App java es como si fuera nuestro main, que nos permite cre
        }
 
         // 7) universidad
-        Universidad univ = new Universidad("Unvime");
+        Universidad univ = new Universidad("Unvime", "Villa Mercedes");
         univ.agregarCarrera(Ingenieria);
         //mostrar info
         univ.mostrarinfo();
